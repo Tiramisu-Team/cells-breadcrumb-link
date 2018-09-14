@@ -16,6 +16,10 @@ class CellsBreadcrumbLink extends Polymer.Element {
       }
     };
   }
+
+  _followBreadcrumb() {
+    this.dispatchEvent(new Event('breadcrumb-followed', {composed: true, bubbles: true}));
+  }
 }
 
 customElements.define(CellsBreadcrumbLink.is, CellsBreadcrumbLink);
