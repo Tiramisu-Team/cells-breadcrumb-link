@@ -1,0 +1,41 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="cells-breadcrumb-link-styles.html">
+<link rel="import" href="../cells-st-button/cells-st-button.html">
+<!--
+`<cells-breadcrumb-link>` description.
+
+Example:
+
+```html
+<cells-breadcrumb-link></cells-breadcrumb-link>
+```
+
+## Icons
+
+Since this component uses icons, it will need an [iconset](https://bbva.cellsjs.com/guides/best-practices/cells-icons.html) in your project as an [application level dependency](https://bbva.cellsjs.com/guides/advanced-guides/application-level-dependencies.html). In fact, this component uses an iconset in its demo.
+
+## Styling
+
+The following custom properties and mixins are available for styling:
+
+| Custom property | Description     | Default        |
+|:----------------|:----------------|:---------------|
+| --cells-breadcrumb-link  | Mixin applied to :host     | {}  |
+| --cells-fontDefault  | Font family of :host    | sans-serif  |
+
+@customElement
+@polymer
+@demo demo/index.html
+-->
+<dom-module id="cells-breadcrumb-link">
+  <template>
+    <style include="cells-breadcrumb-link-styles cells-breadcrumb-link-shared-styles"></style>
+    <slot></slot>
+
+    <p>[[label]]</p>
+    <cells-st-button>
+
+    </cells-st-button>
+  </template>
+  <script src="cells-breadcrumb-link.js"></script>
+</dom-module>
